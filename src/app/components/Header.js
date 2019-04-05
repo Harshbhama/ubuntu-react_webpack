@@ -29,6 +29,8 @@ export class Header extends React.Component{
           <p>Status is : {this.state.status}</p>
           <hr/>
           <button onClick = {this.onMakeOlder.bind(this)} className = "btn btn-primary"> Click ME </button>
+          <hr/>
+          <button onClick = {this.props.greet} className = "btn btn-primary"> Greet ME </button>
 
         </div>
     )
