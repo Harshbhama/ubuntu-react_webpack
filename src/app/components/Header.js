@@ -5,7 +5,7 @@ export class Header extends React.Component{
     super();
     this.state = {
       age: props.initialAge,
-      newhomelink: "Changed Link",
+      newhomelink: props.linkname,
       status: 0
     }
     setTimeout(() => {
@@ -24,6 +24,11 @@ export class Header extends React.Component{
   onChangeLink(){
     this.props.changeLink(this.state.newhomelink)
   }
+  onHandleChange(event){
+    this.setState({
+      newhomelink: event.target.value
+    })
+  }
   render(){
     return(
         <div>
@@ -31,12 +36,13 @@ export class Header extends React.Component{
           <p>Place is :{this.props.place}</p>
           <p>Age is : {this.state.age}</p>
           <p>Status is : {this.state.status}</p>
-          <hr/>
+          <hr/>Abc homeLink = {this.state.homeLink}
           <button onClick = {this.onMakeOlder.bind(this)} className = "btn btn-primary"> Click ME </button>
           <hr/>
           <button onClick = {this.props.greet} className = "btn btn-primary"> Greet ME </button>
           <hr/>
-          <button onClick = {this.onChangeLink.bind(this)} className = "btn btn-primary"> Change Homelink </button>
+          <input type = "text" value = {this.state.newhomelink} onChange = {(event) => this.onHandleChange(event)} />
+          <button onClick = {(this.onChangeLink.bind(this))} className = "btn btn-primary"> Change Homelink </button>
 
         </div>
     )
