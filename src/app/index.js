@@ -12,7 +12,9 @@ class App extends React.Component{
     return(
       <div className = "container">
 
-          <Header name = {"harsh"} place = {"delhi"} user = {user}/>
+          <Header name = {"harsh"} place = {"delhi"} age = {22} user = {user}>
+          <p> This is a paragraph </p>
+          </Header>
           <Home />
       </div>
     )
