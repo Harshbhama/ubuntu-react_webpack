@@ -7,7 +7,13 @@ export class Header extends React.Component{
       age: props.initialAge,
       status: 0
     }
+    setTimeout(() => {
+        this.setState({
+          status: 1
+        })
+    },3000)
   }
+
   onMakeOlder(){
     this.setState({
       age: this.state.age +3

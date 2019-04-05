@@ -4,6 +4,7 @@ import ReactDOM from "react-dom"
 
 import { Header } from "./components/Header"
 import { Home } from "./components/Home"
+
 class App extends React.Component{
   render(){
 
@@ -11,7 +12,8 @@ class App extends React.Component{
       <div className = "container">
 
           <Header name = {"harsh"} place = {"delhi"} initialAge = {22} />
-          <Home />
+          <Home homeLink = "yes"/>
+
       </div>
     )
   }

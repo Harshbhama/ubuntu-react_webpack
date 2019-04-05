@@ -1,11 +1,9 @@
 import React from "react"
 
-export class Home extends React.Component{
-  render(){
-    return(
+export const Home = (props) => {
+  return(
       <div>
-        <h3> I am home </h3>
+          <p>{props.homeLink}</p>
       </div>
-    )
-  }
+  )
 }
